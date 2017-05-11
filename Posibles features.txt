@@ -1,0 +1,35 @@
+#Posibles features
+
+###Errores de ENTRADA y SALIDA y PERFIL
+* Leer los parametros formales en modulos
+	* en acciones
+	* en funciones
+* Escribir los resultados en un módulo
+	* en acciones
+	* en funciones
+* Escribir en una funcion
+
+###Pasaje de parámetros
+* Uso de variables globales
+	* En funciones
+	* En acciones
+* Asignar a una variable con tipo de pasaje de parametro por copia
+	* En acciones
+	* En funciones
+* Procedimiento sin ningún parámetro con tipo referencia VAR
+* funciones con parametros de tipo referencia VAR
+* 
+
+
+#DUDAS
+* Escenarios gherkin para los los tipos de errores que se resolverían con los test tipo PEX? 
+ya que cada ejercicio tiene test particulares para su caso. y habría que abstraerse en gherkin
+	Serían Given salidas X y salidas esperadas Y AND X<>Y THEN mensajeX?
+	o Given problema de __tal__tipo__con__tales__salidas__esperadas__ AND salidas X y esperadas Y AND X<>Y THEN mensajeX?
+
+* Alguna forma ideal para abstraer los perfiles?
+EJ:
+
+* Checkeos ad hoc?
+
+* Conversor de Oxygene a C#?
