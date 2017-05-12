@@ -21,6 +21,18 @@
 * 
 
 
+###Gherkin cheatsheet
+In Gherkin, each line that isn't blank has to start with a Gherkin keyword, followed by any text you like. The main keywords are:
+
+Feature 								- nombre y una descripción de lo que se quiere que se haga
+Scenario								- Un ejemplo particular en el que se daría tal feature
+Given, When, Then, And, But (Steps)		- Given: el estado inicial del escenario
+										- When: describe un evento o accion 
+										- Then: la salida (a usuario) 
+Background								- Cosas que se repitan para los escenarios (evitar escribir mismas cosas en los given)
+Scenario Outline						- Abstraer algunos datos, son necesarios ejemplos para ilustrar
+Examples								- Despues de los Scenario Outline, son contenedores para tablas
+
 #DUDAS
 * Escenarios gherkin para los los tipos de errores que se resolverían con los test tipo PEX? 
 ya que cada ejercicio tiene test particulares para su caso. y habría que abstraerse en gherkin
