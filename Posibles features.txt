@@ -1,22 +1,19 @@
 #Posibles features
 
 ###Errores de ENTRADA y SALIDA y PERFIL
-* Leer los parametros formales en modulos
-	* en acciones
-	* en funciones
-* Escribir los resultados en un módulo
-	* en acciones
-	* en funciones
-* Escribir en una funcion
-
+* Leer los parametros formales en modulos 							//
+	* en acciones													//
+	* en funciones													//
+* Escribir los resultados en un módulo								//
+	* en acciones													//
+	* en funciones													//
+* Escribir en una funcion											//
+	
 ###Pasaje de parámetros
-* Uso de variables globales
-	* En funciones
-	* En acciones
+* Uso de variables globales 										//
 * Asignar a una variable con tipo de pasaje de parametro por copia
-	* En acciones
-	* En funciones
-* Procedimiento sin ningún parámetro con tipo referencia VAR
+	* En acciones													//
+* Procedimiento sin ningún parámetro con tipo referencia VAR		
 * funciones con parametros de tipo referencia VAR
 * 
 
