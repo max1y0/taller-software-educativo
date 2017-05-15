@@ -13,8 +13,8 @@
 * Uso de variables globales 										//
 * Asignar a una variable con tipo de pasaje de parametro por copia
 	* En acciones													//
-* Procedimiento sin ningún parámetro con tipo referencia VAR		
-* funciones con parametros de tipo referencia VAR
+* Procedimiento sin ningún parámetro con tipo referencia VAR		//
+* funciones con parametros de tipo referencia VAR					//
 * 
 
 
