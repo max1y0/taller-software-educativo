@@ -1,0 +1,134 @@
+##clase 1
+Presentaci\F3n e idea de la materia
+
+##clase 2
+Vamos a hacer un programa de asistencia al estudiante inicial de programaci\F3n.
+ideas:
+* un bot asistente
+* a la pex4fun
+* un "compilador" de especificaciones
+
+Teor\EDa sobre ingenieria de software
+
+##clase 3
+Microsoft PEX/IntelliTest
+Precondiciones, postcondiciones.
+Pexobserve.
+Implementaciones ocultas.
+
+
+##clase 4
+####dudas
+**Levantar errores de compilaci\F3n en pex?**
+No, centrarse en los errores de comportamiento.
+
+Contracts
+---------
+Precondiciones con contracts (Constracts.Require) (se generan casos en intellitest a diferencia de pexAssume)
+Ideal para detectar si el alumno est\E1 resolviendo el problema correcto. Chequeando si la precondici\F3n se viola.
+
+####tarea
+Instalar contracts for net
+
+##clase 5
+Teor\EDa sobre captura de requerimientos
+DFD
+Orientado a Objetos
+Prototipos
+
+proxima clase
+-------------
+traer parciales. Vamos a ver tecnolog\EDas de escritura de requirimientos.
+
+##clase 6
+Teor\EDa sobre SRS
+Lenguajes de Especificaci\F3n
+	gherkin
+	cucumber (toma un escenario gherkin y lo ejecuta)
+	BDD
+
+##clase 7
+Para los parciales:	
+- Considerar s\F3lo a\F1os 2011 y 2012.
+- Concentrarse, por el momento, en los ejercicios de programaci\F3n, no de especificaciones.
+- Intentar categorizar los errores, por ejemplo
+	* incompatibilidad entre el manejo de entrada/salida y el tipo de abstracci\F3n procedimental usada (e.g., se pide una funci\F3n y el alumno lee las entradas de entrada est\E1ndar o escribe en salida est\E1ndar)
+	* errores algor\EDtmicos (SUBDIVIDIR!)
+	* chequeos innecesarios (e.g., se plantea una precondici\F3n y el alumno la re-chequea en el cuerpo de la rutina)
+	* errores de perfil/signatura (e.g., n\FAmero err\F3neo de par\E1metros o tipos)
+
+Tener en cuenta en la categorizaci\F3n aquellas que son utilizadas en la literatura.
+
+Cuantificar la cantidad de errores de cada tipo, como forma de estimar la frecuencia de cada uno.
+
+Mirar CoCo (Code Coach)
+
+https://bitbucket.org/coconot/coco
+
+##clase 8
+- Muchos ejercicios (aunque no todos) deben partir de \93canvas vac\EDo\94, a diferencia de lo que ofrecen entornos tipo PexForFun o HackerRank.
+ Esto es porque se quiere evaluar cuestiones como definici\F3n correcta de perfiles, tipo correcto de pasaje de par\E1metros, uso adecuado de las abstracciones procedimentales (e.g., input/output a trav\E9s de par\E1metros y valores de retorno en funciones)
+
+- Trabajar\EDamos directamente sobre Pascal, no pseudo-c\F3digo. La raz\F3n es que, para trabajar sobre pseudo-c\F3digo tendr\EDamos que adoptar una sem\E1ntica operacional y fijar una sintaxis para pseudo-c\F3digo (como en PSeInt), y deja de ser pseudo-c\F3digo.
+
+- Varios tipos de errores a soportar, clasificados aqu\ED por la tecnolog\EDa que se usar\EDa para la asistencia:
+	- errores de signatura y \93mal" uso de I/O. Esto demandar\EDa chequeos ad hoc, simples, de respetar una signatura abstracta de lo que se espera, de que no haya uso inadecuado de I/O, etc.
+	- errores de comprensi\F3n de la sem\E1ntica del lenguaje. Ejemplos de estos son, en particular, los de pasajes de par\E1metros. OJO, esto no incluye errores de compilaci\F3n, como usar en Pascal return en lugar de asignar el valor de retorno a una var. con el nombre de la funci\F3n.
+	- errores de resoluci\F3n incorrecta del problema. Estos abarcan los de mala comprensi\F3n del problema (pero que pasan el chequeo b\E1sico de tipos adecuados de la primera categor\EDa), resoluci\F3n incorrecta estilo off-by-one, loops infinitos, etc. 
+		Estos errores ser\EDan aquellos para los cuales la asistencia vendr\EDa en forma de tests espec\EDficos (resultado esperado vs resultado obtenido), o a trav\E9s de herramientas tipo Pex.
+
+Otras cuestiones a decidir:
+	- Interfaz. L\EDnea de comandos? Se complica para ejercicios que s\F3lo piden implementaci\F3n de una funci\F3n o procedimiento.
+		Web? C\F3modo, no hace falta instalar nada, \85
+		No olvidar la idea del bot...
+	- Qu\E9 hacer con los ejercicios que demandan la definici\F3n de TADs nuevos? E.g., c\EDrculos como punto central y radio, etc. Requieren definiciones adicionales que hay que ver c\F3mo las manejaremos.
+	- Lenguaje de programaci\F3n para el desarrollo? Pensar en opciones, que depender\E1n en particular de la interfaz.
+-----------------
+#TODO
+	- Comenzar a escribir escenarios Gherkin para los errores a soportar. En particular, hay que pensar c\F3mo se especificar\E1 el perfil esperado de una rutina, o cosas as\ED. Esto tambi\E9n nos forzar\E1 a pensar c\F3mo queremos proveer la salida (la ayuda al estudiante).
+	- Identificar qu\E9 traducciones har\E1n falta para usar la infraestructura de an\E1lisis necesaria (e.g., Pascal -> C#)
+
+##Clase 9
+Modificar los escenarios gherkin para que se describa como si un usuario estuviese usando el sistema, ej: un estudiante escribe un procedimiento AND blablabla
+
+* Escenarios gherkin para los los tipos de errores que se resolver韆n con los test tipo PEX? 
+ya que cada ejercicio tiene test particulares para su caso. y habr韆 que abstraerse en gherkin
+	Ser韆n Given salidas X y salidas esperadas Y AND X<>Y THEN mensajeX?
+	o Given problema de __tal__tipo__con__tales__salidas__esperadas__ AND salidas X y esperadas Y AND X<>Y THEN mensajeX?
+
+* Given: problema tal\
+	solucion del docente tal
+	y el alumno provee tal
+	WHEN: salida tal y salida esperada tal OTRA
+	comparar, salidas
+	THEN: mensaje TAL
+
+####Consejos CHINO (consultar a brusatti sobre todo esto)
+
+* (servidor web) sinatra  
+	GEM de ruby, es una versión mas chica de RAILS, más fácil generar un server
+	Eso me va a olbigar a usar REST, para generar el API
+
+* (cliente) REACT de facebook 
+	pagina web de forma composicional (conjunto de componentes)
+	RELAY se compunica cn el API, mas GRAPHQL
+otra opcion: ANGULAR.js
+otra opcion: AJAX con promises y fetchs
+
+Cliente(react) -> Redux -> Relay <-> Server (Sinatra) <- Backend (ruby) <- PEX ?<- Conversor de Pascal a C#? 
+nota: necesito traductores para este nuevo javascript
+
+
+####clase 10
+
+TODO: generar un reporte de los errores de los parciales (Latex, un formato especial no se que cosa)
+
+Ejemplos de gamification
+Vimos code-defenders.org
+vimos DragonBox
+
+Pensar en modos de gamificar la herramienta
+
+
+####clase 11
+Basar el reporte del pdf de sigcseJavaRev 
