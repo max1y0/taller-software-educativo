@@ -6,7 +6,8 @@ Feature: detect and inform when a global variable is used on a module
 		And a student writes a module (procedure or function)
 
 
-#TODO: subdividir segun el acceso, si es asignación, escritura, usado en una expresión, etc. Usar scenario outline para espeficicar si es procedimiento o función"
+#TODO: no hace falta dividirlo, preguntar por module o por function or procedure
+
 	Scenario: A global variable is used on a function
 		Given the profile of the module is "function inc();"
 		When the module acceses the variable "a"		
@@ -16,3 +17,5 @@ Feature: detect and inform when a global variable is used on a module
 		Given the profile of the module is "procedure inc();"
 		When the module acceses the variable "a"		
 		Then Print "Estás usando una variable global en un procedimiento. Es realmente necesario? Considerar pasarla por parametro!"
+
+#TODO

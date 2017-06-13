@@ -132,3 +132,21 @@ Pensar en modos de gamificar la herramienta
 
 ####clase 11
 Basar el reporte del pdf de sigcseJavaRev 
+
+####clase 12
+TODO alinear a derecha los numeros en la tabla de LaTeX
+En la sección de la herramienta habria que poner cuales son las condiciones para una aplicación educativa de calidad
+
+Buscar un spellchecker para sublime para LaTeX
+
+Los todo del informe estan en el mismo.
+
+Cambiar los escenarios para que se diga mas en texto lo que se esta esperando y que quede claro que se toma como parametro, por ejemplo, el nmbre del procedimiento y el nombre del parametro:
+ej
+given a student writes a procedure 'name' 
+and the procedure has a parameter 'x' passed as value
+blablabla
+
+De los errores de solucion de problemas: buscar errores sutiles, 2 o 3
+
+TODO: Pensar el informe como una recopilación de errores, con ejemplos, para escribir sobre esto y las posibles herramientas que solucionan estos problemas (pex, pascal analizer, etc.)
